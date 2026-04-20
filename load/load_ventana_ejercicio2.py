@@ -4,7 +4,7 @@ from clases.ejercicio2 import Calculadora
 class VentanaCalculadora(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("simpson/simpson.ui", self)
+        uic.loadUi("gui/simpson.ui", self)
         self.show()
         
         self.boton_sumar.clicked.connect(self.calcular)

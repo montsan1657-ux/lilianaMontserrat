@@ -5,7 +5,7 @@ from load.load_ventana_ejercicio1 import VentanaCalculadora1
 class MenuPrincipal(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi("simpson/menu_principal.ui",self)
+        uic.loadUi("gui/menu_principal.ui",self)
         self.showMaximized()
         
         self.actionEjercicio_1.triggered.connect(self.ingresarEjercicio1)

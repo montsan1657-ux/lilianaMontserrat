@@ -4,7 +4,7 @@ from PyQt5 import QtWidgets, uic
 class VentanaCalculadora1(QtWidgets.QDialog):
     def __init__(self):
         super().__init__()
-        uic.loadUi("simpson/load_ventana_ejercicios.ui", self) 
+        uic.loadUi("gui/load_ventana_ejercicios.ui", self) 
 
         self.btnCalcular.clicked.connect(self.ejecutar_ejercicio)
 
