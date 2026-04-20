@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets, uic
-from clases.calculo import Calculadora
+from clases.ejercicio2 import Calculadora
 
 class VentanaCalculadora(QtWidgets.QDialog):
     def __init__(self):

@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets,uic
-from load.load_ventana_calculo import VentanaCalculadora
+from load.load_ventana_ejercicio2 import VentanaCalculadora
+from load.load_ventana_ejercicio1 import VentanaCalculadora1
 
 class MenuPrincipal(QtWidgets.QMainWindow):
     def __init__(self):
@@ -15,7 +16,7 @@ class MenuPrincipal(QtWidgets.QMainWindow):
         self.close()
         
     def ingresarEjercicio1(self):
-       vc= VentanaCalculadora()
+       vc= VentanaCalculadora1()
        vc.exec()
         
     def ingresarEjercicio2(self):
