@@ -1,5 +1,5 @@
-class RegresionLineal:
-    def _init_(self, x, y):
+class RegresionLineal(object):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
         self.n = len(x)
@@ -30,7 +30,7 @@ class RegresionLineal:
         suma_y2 = sum(y**2 for y in self.y)
 
         num = (self.n * suma_xy) - (suma_x * suma_y)
-        den = ((self.n * suma_x2 - suma_x*2) * (self.n * suma_y2 - suma_y2)) * 0.5
+        den = ((self.n * suma_x2 - suma_x**2) * (self.n * suma_y2 - suma_y**2)) ** 0.5
 
         return num / den
 

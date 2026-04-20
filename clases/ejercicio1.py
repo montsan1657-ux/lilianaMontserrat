@@ -1,20 +1,20 @@
 from psp.psp1 import RegresionLineal
 
-class Ejercicio1:
-    def _init_(self):
-        self.x = []
-        self.y = []
-
-    def cargar_datos(self, x, y):
+class Ejercicio1(object):
+    def __init__(self, x, y, xk):
         self.x = x
         self.y = y
+        self.xk = xk
 
-    def calcular(self, xk):
+        self.b0 = 0
+        self.b1 = 0
+        self.r = 0
+        self.yk = 0
+
+    def calcular(self):
         modelo = RegresionLineal(self.x, self.y)
 
-        b1 = modelo.calcular_b1()
-        b0 = modelo.calcular_b0(b1)
-        r = modelo.correlacion()
-        yk = modelo.prediccion(xk, b0, b1)
-
-        return b0, b1, r, yk
+        self.b1 = modelo.calcular_b1()
+        self.b0 = modelo.calcular_b0(self.b1)
+        self.r = modelo.correlacion()
+        self.yk = modelo.prediccion(self.xk, self.b0, self.b1)

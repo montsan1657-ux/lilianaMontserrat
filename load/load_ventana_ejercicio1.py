@@ -2,9 +2,9 @@ from clases.ejercicio1 import Ejercicio1
 from PyQt5 import QtWidgets, uic
 
 class VentanaCalculadora1(QtWidgets.QDialog):
-    def _init_(self):
-        super()._init_()
-        uic.loadUi("gui/ventana_ejercicios.ui", self)  
+    def __init__(self):
+        super().__init__()
+        uic.loadUi("simpson/load_ventana_ejercicios.ui", self) 
 
         self.btnCalcular.clicked.connect(self.ejecutar_ejercicio)
 
@@ -19,15 +19,13 @@ class VentanaCalculadora1(QtWidgets.QDialog):
             if len(x) != len(y):
                 raise ValueError("Datos inválidos")
 
-            ejercicio = Ejercicio1()
-            ejercicio.cargar_datos(x, y)
+            ejercicio = Ejercicio1(x, y, xk)
+            ejercicio.calcular()
 
-            b0, b1, r, yk = ejercicio.calcular(xk)
-
-            self.lblB0.setText(f"b0: {b0:.4f}")
-            self.lblB1.setText(f"b1: {b1:.4f}")
-            self.lblR.setText(f"r: {r:.4f}")
-            self.lblYk.setText(f"Predicción: {yk:.4f}")
+            self.lblB0.setText(f"b0: {ejercicio.b0:.4f}")
+            self.lblB1.setText(f"b1: {ejercicio.b1:.4f}")
+            self.lblR.setText(f"r: {ejercicio.r:.4f}")
+            self.lblYk.setText(f"Predicción: {ejercicio.yk:.4f}")
 
         except:
             self.lblB0.setText("b0: error")

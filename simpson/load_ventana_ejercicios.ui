@@ -26,13 +26,13 @@
     <string>Calcular</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
      <y>20</y>
-     <width>192</width>
-     <height>76</height>
+     <width>116</width>
+     <height>69</height>
     </rect>
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -76,12 +76,12 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>280</x>
      <y>30</y>
-     <width>49</width>
+     <width>111</width>
      <height>72</height>
     </rect>
    </property>
