@@ -91,6 +91,8 @@ QMenu::separator {
     </property>
     <addaction name="actionEjercicio_1"/>
     <addaction name="actionEjercicio_2"/>
+    <addaction name="actionEjercicio_6"/>
+    <addaction name="actionEjercicio_4"/>
     <addaction name="separator"/>
     <addaction name="actionSalir"/>
    </widget>
@@ -110,6 +112,16 @@ QMenu::separator {
   <action name="actionSalir">
    <property name="text">
     <string>Salir</string>
+   </property>
+  </action>
+  <action name="actionEjercicio_4">
+   <property name="text">
+    <string>Ejercicio 4</string>
+   </property>
+  </action>
+  <action name="actionEjercicio_6">
+   <property name="text">
+    <string>Ejercicio 3</string>
    </property>
   </action>
  </widget>
